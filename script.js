@@ -1,18 +1,19 @@
 let myName = "Abdur Rehman";
 const myAge = 60;
 // const myKid = "18";
-let hasPerformedUmraah = false;
-myAge = 23;
-
-// const a = 10;
+let hasPerformedUmraah;
+// myAge = 23;
+console.log(hasPerformedUmraah);
+const a = 10;
 // const b = 20;
 // const c = a % b;
 // console.log(26 % 3); // 20 * 20
 
 if (myName !== "Abdur Rehman") {
-  console.log("not AB");
-}
-if (myAge >= 18 && myAge <= 60) {
+  console.log("AB");
+} // && and both cond
+// || only 1
+if (myAge >= 18 || myAge <= 60) {
   console.log("you can open account");
 } else {
   console.log("you can not open account");
@@ -33,13 +34,17 @@ switch (myAge) {
 }
 
 //this loop will run from 0 till 15
-for (let i = 0; i <= 15; i++) {
+for (let i = 10; i <= 15; i++) {
   console.log(myName + i);
 }
 
 function printMyName(a, b) {
   console.log(a, b);
   return "My Name is" + b;
+}
+
+function sayHello() {
+  console.log("Hello");
 }
 
 function sum(a, b) {
@@ -50,4 +55,46 @@ function sum(a, b) {
 
 // const valueFromFunc = sum(12, 10);
 const result = printMyName(24, "AB", "KHI");
-console.log(result);
+sayHello();
+
+//Array
+const arr = [
+  1,
+  2,
+  "AB",
+  true,
+  {
+    name: "EBAD",
+  },
+];
+
+arr.push("IEC");
+arr.push("IEC");
+
+arr[0] = "zero index";
+
+arr.pop();
+
+console.log(arr[4].name);
+
+//Object
+const myObj = {
+  name: "AB",
+  uni: "NED",
+  age: 24,
+  hasPerformedUmraah: false,
+};
+
+myObj.class = {};
+myObj.arr = [];
+myObj.name = "IEC";
+
+console.log(myObj);
+
+const numbers = [19, 22, 33, 4, 55, 66, 77, 8, 9, 45, 12, 56, 78];
+
+for (let i = 0; i < numbers.length; i++) {
+  if (numbers[i] > 18) {
+    console.log(numbers[i]);
+  }
+}
